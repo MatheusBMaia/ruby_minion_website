@@ -1,8 +1,6 @@
 class Produto < ApplicationRecord
   belongs_to :codigogrupo
 
-  attr_accessor :new_grupo_nomegrupo
-
   has_attached_file :imagem, :styles => { :thumb => "66x100", :cover => "132x200" }, :url => "/images/imagem/:id-:style.:extension", :default_url => "/images/imagem.png"
 
   validates_numericality_of :codigoproduto  
