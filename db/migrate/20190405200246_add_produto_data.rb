@@ -37,7 +37,9 @@ class AddProdutoData < ActiveRecord::Migration[5.2]
          :descricaoproduto => "Bonecos de Vinil Minions Stuart, Bob e Kevin. Seu filho vai adorar o boneco do filme Meu Malvado Favorito, com braços articulados e cintura giratória. A diversão estará garantida.",
          :valorunitario => 150.90 )
   end  
+
+
   def self.down
-       Produto.delete_all
+        Produto.delete_all
   end
 end
