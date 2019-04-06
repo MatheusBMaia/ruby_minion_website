@@ -1,0 +1,48 @@
+<%= form_with(model: produto, local: true) do |form| %>
+  <% if produto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(produto.errors.count, "error") %> prohibited this produto from being saved:</h2>
+
+      <ul>
+      <% produto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label "Grupo" %>
+    <%= form.collection_select :codigogrupo_id, Grupo.all, :id, :nomegrupo, :prompt => "Selecione" %>
+    <span class="help">ou crie um novo</span>
+    <%= form.text_field :new_grupo_nomegrupo %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Código Produto" %>
+    <%= form.number_field :codigoproduto_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Nome" %>
+    <%= form.text_field :nomeproduto %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Descrição" %>
+    <%= form.text_field :descricaoproduto %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Preço" %>
+    <%= form.text_field :valorunitario %>
+  </div>
+
+  <%= form.label :imagem %>
+  <%= form.file_field :imagem %><br/>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

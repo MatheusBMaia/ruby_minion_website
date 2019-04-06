@@ -1,0 +1,2 @@
+class BotaoController < ApplicationController
+end

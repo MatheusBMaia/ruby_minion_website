@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="produto">
+ <h2><%= link_to @produto.nomeproduto, @produto.nomeproduto %></h2>
+ 
+ <%= link_to image_tag(@produto.imagem.url(:imagem)), @produto %>
+ <h3><%= "R" + "#{number_to_currency @produto.valorunitario}" %></h3>
+ <br/>
+ <p><%=h @produto.descricaoproduto %></p>
+
+</div>
+
+<%= link_to 'Editar', edit_produto_path(@produto) %> |
+<%= link_to 'Voltar', produtos_path %>

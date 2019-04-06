@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<div class="center">
+  <h1>Produtos</h1>
+</div>
+
+<% @produtos.each do |produto| %>
+ <div class="group">
+     <h3><%= link_to produto.nomeproduto, produto %></h3>
+     <%= link_to image_tag(produto.imagem.url(:imagem)), produto %>
+     <h4><%= "R" + "#{ number_to_currency produto.valorunitario}" %></h4>
+ </div>
+<% end %>
+
+
+<br>
+
+<%= link_to 'Cadastrar Produto', new_produto_path %>

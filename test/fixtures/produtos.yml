@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigogrupo_id: 1
+  codigoproduto_id: 1
+  nomeproduto: MyString
+  descricaoproduto: MyText
+  valorunitario: 1.5
+
+two:
+  codigogrupo_id: 1
+  codigoproduto_id: 1
+  nomeproduto: MyString
+  descricaoproduto: MyText
+  valorunitario: 1.5
